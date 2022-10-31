@@ -32,10 +32,14 @@ public class BookRestController {
         return ResponseEntity.ok(this.bookService.getAll());
     }
 
-    @GetMapping("/bookId")
-    ResponseEntity<Book> getById(final @RequestParam String bookId){
+
+    @GetMapping("/{bookId}")
+    ResponseEntity<Book> getById(final @PathVariable String bookId){
         return ResponseEntity.ok(this.bookService.getById(bookId));
     }
+
+
+
 
     @DeleteMapping("/bookId")
     public ResponseEntity<Void> delete(final @PathVariable String bookId){
