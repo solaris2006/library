@@ -39,4 +39,10 @@ public class BookRepositoryImpl implements BookRepository {
 
         mongoTemplate.remove(query, Book.class);
     }
+
+    @Override
+    public Book findById(String bookId) {
+
+        return      mongoTemplate.findById(bookId, Book.class);
+    }
 }

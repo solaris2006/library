@@ -4,6 +4,7 @@ package com.jlg.library.domain.author;
 import com.jlg.library.domain.book.Book;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
@@ -13,8 +14,11 @@ import java.util.List;
 import java.util.UUID;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 public class Author {
+
+
 
     @Id
     private String id;

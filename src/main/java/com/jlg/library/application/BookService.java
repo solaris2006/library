@@ -48,4 +48,8 @@ public class BookService {
         this.bookRepository.save(existingBook);
 
     }
+
+    public Book getById(String bookId) {
+       return this.bookRepository.findById(bookId);
+    }
 }
